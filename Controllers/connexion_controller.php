@@ -1,5 +1,4 @@
 <?php
-
 include_once $_SERVER['DOCUMENT_ROOT']. 'jevote/_config/config.php';
 include_once $_SERVER['DOCUMENT_ROOT']. 'jevote/_config/database.php';
 include_once $_SERVER['DOCUMENT_ROOT']. 'jevote/_config/response.php';
@@ -25,7 +24,7 @@ if (isset($_POST['submit'])) {
 
     $_SESSION['pseudo'] = $pseudo;
 
-    $query = "SELECT pseudo, identities, password FROM users WHERE pseudo ='$pseudo' AND identities='$identities' AND password='$password'" ;
+    $query = "SELECT * FROM users WHERE pseudo ='$pseudo' AND identities='$identities' AND password='".hash('sha256', $password)."'" ;
     $result = mysqli_query($db, $query) or die(mysqli_error());
 
 
@@ -36,13 +35,13 @@ if (isset($_POST['submit'])) {
         // vérifier si l'utilisateur est un administrateur ou un utilisateur
 
         if ($Id['identities'] == 'administrateur') {
-
+            $_SESSION['id'] = $Id['id'];
             header('location: ../Views/home_view.php');
             echo 'cool';
 
         }else{
-//            header('location: ');
             echo 'pas mal';
+            header('location: ../Views/home_view.php');
         }
     }else{
         $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";

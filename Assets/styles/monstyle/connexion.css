@@ -26,7 +26,7 @@
     --nav-width: 68px;
 
     --first-color: #4723d9;
-    --first-color-light: #afa5d9;
+    --first-color-light: #502fb1;
     --white-color: #f7f6fb;
     --black-color: rgb(48, 48, 48);
     --btn-color: rgb(255, 43, 149);
@@ -48,6 +48,7 @@ a {
 *, ::before, ::after {
 
     box-sizing: border-box;
+    outline: none;
 
 }
 
@@ -153,6 +154,29 @@ form {
 
     transition: .5s;
     background: var(--btn-hover);
+
+}
+
+.sing-in {
+
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    background: var(--first-color);
+    border-top: 5px solid var(--first-color-light);
+    border-right: 3px solid var(--first-color-light);
+    transition: .5s;
+    opacity: 50%;
+
+}
+
+.sing-in:hover {
+
+    opacity: 100%;
+    transition: .5s;
 
 }
 

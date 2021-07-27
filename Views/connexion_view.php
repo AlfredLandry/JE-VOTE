@@ -32,14 +32,14 @@ include_once 'Models/connexion_model.php';
                 </div>
                 <div class="container-body">
 
-                    <h3>USER NAME</h3> <input type="text" class="input" name="pseudo" required>
+                    <h3>PSEUDO</h3> <input type="text" class="input" name="pseudo" required>
                     <h3>PASSWORD</h3> <input type="password" class="input" name="password" required>
                     <h3>ID</h3> <input type="text" class="input id" name="id" required>
 
                 </div>
                 <div class="footer">
 
-                    <a href="Views/inscription_view.php" name="submit" class="btn"> SING IN </a>
+                    <a href="Views/inscription_view.php" name="submit" class="sing-in"> SING IN </a>
 
                     <input type="submit" name="submit" value="LOG IN" class="btn">
 

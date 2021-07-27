@@ -12,7 +12,11 @@
             </div>
             <div class="header_img">
 
-                <img src="../Assets/images/user/default_user.jpg" alt="User_img">
+                <a href="../Views/profile_view.php" target="_blank" title="Editer votre profile.">
+
+                    <img src="../Assets/images/user/default_user.jpg" alt="User_img">
+
+                </a>
 
             </div>
 

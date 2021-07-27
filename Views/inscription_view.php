@@ -20,7 +20,7 @@ include_once '../Models/inscription_model.php';
 
 <body>
 
-<form method="post" action="../Controllers/inscription_controller.php" class="needs-validation">
+<form method="post" action="../Controllers/inscription_controller.php" class="needs-validation" enctype="multipart/form-data">
 
     <div class="container">
 
@@ -57,12 +57,6 @@ include_once '../Models/inscription_model.php';
 
                 <h3>LOCATION</h3> <input type="text" class="input" name="action" required>
                 <h3>DATE</h3> <input type="datetime-local" class="input" name="date" required>
-
-            </div>
-
-            <div class="">
-
-                <h3>PROFILE</h3> <input type="file" name="profile" required>
 
             </div>
 
